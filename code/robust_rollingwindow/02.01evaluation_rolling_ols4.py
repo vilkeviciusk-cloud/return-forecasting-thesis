@@ -1,0 +1,81 @@
+import pandas as pd
+import numpy as np
+from pathlib import Path
+
+
+# ============================================================
+# 1. File paths
+# ============================================================
+
+ROBUSTNESS_DIR = Path(
+    r"C:\Users\vilke\OneDrive\Dokumentai\thesis_project\output\forecasts\robustness"
+)
+
+FORECAST_PATH = ROBUSTNESS_DIR / "forecasts_ols4_rolling_240.csv"
+
+OUTPUT_PATH = ROBUSTNESS_DIR / "evaluation_ols4_rolling_240.csv"
+
+
+# ============================================================
+# 2. Load forecasts
+# ============================================================
+
+data = pd.read_csv(FORECAST_PATH)
+data["date"] = pd.to_datetime(data["date"])
+
+
+# ============================================================
+# 3. Forecast errors
+# ============================================================
+
+data["error_hist"] = data["realized"] - data["historical_mean"]
+data["error_ols4"] = data["realized"] - data["ols4"]
+data["error_ols4_restricted"] = data["realized"] - data["ols4_restricted"]
+
+data["sq_error_hist"] = data["error_hist"] ** 2
+data["sq_error_ols4"] = data["error_ols4"] ** 2
+data["sq_error_ols4_restricted"] = data["error_ols4_restricted"] ** 2
+
+
+# ============================================================
+# 4. Compute MSPE, RMSPE, R²OS
+# ============================================================
+
+results = []
+
+for asset in data["asset"].unique():
+
+    df = data[data["asset"] == asset]
+
+    mspe_hist = df["sq_error_hist"].mean()
+    mspe_ols4 = df["sq_error_ols4"].mean()
+    mspe_ols4_restricted = df["sq_error_ols4_restricted"].mean()
+
+    results.append({
+        "asset": asset,
+
+        "MSPE_HistoricalMean": mspe_hist,
+        "MSPE_OLS4": mspe_ols4,
+        "MSPE_OLS4_Restricted": mspe_ols4_restricted,
+
+        "RMSPE_HistoricalMean": np.sqrt(mspe_hist),
+        "RMSPE_OLS4": np.sqrt(mspe_ols4),
+        "RMSPE_OLS4_Restricted": np.sqrt(mspe_ols4_restricted),
+
+        "R2OS_OLS4": 1 - (mspe_ols4 / mspe_hist),
+        "R2OS_OLS4_Restricted": 1 - (mspe_ols4_restricted / mspe_hist)
+    })
+
+
+# ============================================================
+# 5. Save results
+# ============================================================
+
+results_df = pd.DataFrame(results)
+results_df = results_df.round(6)
+
+results_df.to_csv(OUTPUT_PATH, index=False)
+
+print("Rolling OLS-4 evaluation saved successfully.")
+print(results_df)
+print(f"\nSaved as {OUTPUT_PATH}")

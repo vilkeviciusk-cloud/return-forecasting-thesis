@@ -1,0 +1,41 @@
+Comparison,Model,Asset,Mean loss difference,DM statistic,p-value one-sided restricted better,p-value two-sided difference
+OLS: Restricted vs Unrestricted,OLS,NoDur_excess,3.6e-05,1.277572,0.1007,0.2014
+OLS: Restricted vs Unrestricted,OLS,Durbl_excess,0.000146,1.291403,0.098282,0.196564
+OLS: Restricted vs Unrestricted,OLS,Manuf_excess,0.00016,2.77886,0.002728,0.005455
+OLS: Restricted vs Unrestricted,OLS,Enrgy_excess,0.000138,2.745308,0.003023,0.006045
+OLS: Restricted vs Unrestricted,OLS,HiTec_excess,0.000163,2.230988,0.012841,0.025682
+OLS: Restricted vs Unrestricted,OLS,Telcm_excess,7.4e-05,2.162457,0.015291,0.030583
+OLS: Restricted vs Unrestricted,OLS,Shops_excess,6e-05,1.0261,0.152422,0.304844
+OLS: Restricted vs Unrestricted,OLS,Hlth_excess,4.7e-05,2.143065,0.016054,0.032108
+OLS: Restricted vs Unrestricted,OLS,Utils_excess,0.00011,2.639889,0.004147,0.008293
+OLS: Restricted vs Unrestricted,OLS,Other_excess,0.000169,2.174255,0.014843,0.029686
+OLS-4: Restricted vs Unrestricted,OLS-4,NoDur_excess,7e-06,1.104548,0.134678,0.269355
+OLS-4: Restricted vs Unrestricted,OLS-4,Durbl_excess,2e-05,1.423949,0.077231,0.154461
+OLS-4: Restricted vs Unrestricted,OLS-4,Manuf_excess,1.5e-05,1.320003,0.093417,0.186834
+OLS-4: Restricted vs Unrestricted,OLS-4,Enrgy_excess,2e-05,2.424708,0.00766,0.015321
+OLS-4: Restricted vs Unrestricted,OLS-4,HiTec_excess,2.5e-05,1.408302,0.079521,0.159042
+OLS-4: Restricted vs Unrestricted,OLS-4,Telcm_excess,2e-05,1.606293,0.054105,0.108209
+OLS-4: Restricted vs Unrestricted,OLS-4,Shops_excess,1.4e-05,1.59236,0.055652,0.111304
+OLS-4: Restricted vs Unrestricted,OLS-4,Hlth_excess,9e-06,1.128063,0.129647,0.259293
+OLS-4: Restricted vs Unrestricted,OLS-4,Utils_excess,3.7e-05,1.930639,0.026764,0.053528
+OLS-4: Restricted vs Unrestricted,OLS-4,Other_excess,1.8e-05,1.19611,0.115827,0.231654
+Ridge: Restricted vs Unrestricted,Ridge,NoDur_excess,4e-06,1.033905,0.15059,0.301181
+Ridge: Restricted vs Unrestricted,Ridge,Durbl_excess,5e-06,1.333184,0.091236,0.182471
+Ridge: Restricted vs Unrestricted,Ridge,Manuf_excess,0.0,,,
+Ridge: Restricted vs Unrestricted,Ridge,Enrgy_excess,3e-06,0.802574,0.211111,0.422221
+Ridge: Restricted vs Unrestricted,Ridge,HiTec_excess,0.0,,,
+Ridge: Restricted vs Unrestricted,Ridge,Telcm_excess,1e-06,1.005084,0.157428,0.314857
+Ridge: Restricted vs Unrestricted,Ridge,Shops_excess,4e-06,1.755033,0.039627,0.079254
+Ridge: Restricted vs Unrestricted,Ridge,Hlth_excess,0.0,,,
+Ridge: Restricted vs Unrestricted,Ridge,Utils_excess,0.0,,,
+Ridge: Restricted vs Unrestricted,Ridge,Other_excess,4e-06,1.264381,0.103047,0.206093
+Elastic Net: Restricted vs Unrestricted,Elastic Net,NoDur_excess,9e-06,0.560601,0.287535,0.57507
+Elastic Net: Restricted vs Unrestricted,Elastic Net,Durbl_excess,7.4e-05,1.111563,0.133163,0.266326
+Elastic Net: Restricted vs Unrestricted,Elastic Net,Manuf_excess,6.1e-05,2.173821,0.014859,0.029719
+Elastic Net: Restricted vs Unrestricted,Elastic Net,Enrgy_excess,6.7e-05,2.724036,0.003224,0.006449
+Elastic Net: Restricted vs Unrestricted,Elastic Net,HiTec_excess,7.4e-05,1.821095,0.034296,0.068592
+Elastic Net: Restricted vs Unrestricted,Elastic Net,Telcm_excess,2.8e-05,1.416189,0.07836,0.15672
+Elastic Net: Restricted vs Unrestricted,Elastic Net,Shops_excess,3.3e-05,0.830237,0.203202,0.406405
+Elastic Net: Restricted vs Unrestricted,Elastic Net,Hlth_excess,1.6e-05,1.385128,0.083007,0.166013
+Elastic Net: Restricted vs Unrestricted,Elastic Net,Utils_excess,3.6e-05,1.568547,0.058377,0.116754
+Elastic Net: Restricted vs Unrestricted,Elastic Net,Other_excess,7.1e-05,1.606669,0.054063,0.108127

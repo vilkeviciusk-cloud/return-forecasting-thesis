@@ -1,0 +1,9 @@
+Model,Specification,Average adjusted difference,Average CW statistic,Median p-value,Significant at 5%,Significant at 10%,No. industries
+OLS,ols,5e-05,0.779674,0.248956,0,2,10
+OLS,ols_restricted,2.9e-05,0.89753,0.182485,1,1,10
+OLS-4,ols4,2.3e-05,0.557438,0.287452,1,2,10
+OLS-4,ols4_restricted,2.1e-05,0.775594,0.219969,1,2,10
+Ridge,ridge,1.4e-05,0.893605,0.167406,3,5,10
+Ridge,ridge_restricted,1.5e-05,1.018835,0.156574,4,5,10
+Elastic Net,elastic_net,3.5e-05,0.764673,0.229428,1,2,10
+Elastic Net,elastic_net_restricted,2.6e-05,0.898386,0.223949,2,3,10

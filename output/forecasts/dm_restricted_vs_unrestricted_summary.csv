@@ -1,0 +1,5 @@
+Comparison,Avg. DM stat.,Median p-value,Significant 5%,Significant 10%
+OLS: Restricted vs Unrestricted,2.04699,0.030134,7,7
+OLS-4: Restricted vs Unrestricted,1.513498,0.156752,1,2
+Ridge: Restricted vs Unrestricted,1.199027,0.253637,0,1
+Elastic Net: Restricted vs Unrestricted,1.519789,0.136737,2,3

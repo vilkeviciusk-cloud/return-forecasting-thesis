@@ -1,0 +1,9 @@
+estimation_method,model,mean_annualized_excess_return,volatility_annualized,sharpe_ratio,certainty_equivalent_return_gamma_3,min_monthly_return,max_monthly_return,number_of_months
+expanding,historical_mean_cap_20,0.067143,0.143168,0.46898,0.036397,-0.209441,0.155299,696
+expanding,ols4_restricted_cap_20,0.079324,0.153836,0.515638,0.043825,-0.22186,0.177858,696
+expanding,one_over_n,0.076303,0.150937,0.505531,0.04213,-0.21658,0.15029,696
+expanding,ridge_restricted_cap_20,0.075978,0.148509,0.511604,0.042895,-0.19549,0.165195,696
+rolling_240,historical_mean_cap_20,0.066905,0.140158,0.477352,0.037438,-0.185742,0.17262,696
+rolling_240,ols4_restricted_cap_20,0.085712,0.150414,0.569842,0.051776,-0.171955,0.16262,696
+rolling_240,one_over_n,0.076303,0.150937,0.505531,0.04213,-0.21658,0.15029,696
+rolling_240,ridge_restricted_cap_20,0.077768,0.143076,0.54354,0.047061,-0.171232,0.16411,696
