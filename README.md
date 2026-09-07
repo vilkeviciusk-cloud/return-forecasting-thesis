@@ -25,8 +25,7 @@ Under realistic transaction costs, the 1/N benchmark remains the most robust str
 Repository Structure
 ├── processed/     # Cleaned and merged industry portfolio + macro-financial predictor data
 ├── code/          # Forecasting models, portfolio construction, and evaluation scripts
-└── output/
-    └── forecasts/ # Model forecast outputs and portfolio results
+└── output/forecasts/ # Model forecast outputs and portfolio results
 Methods
 Forecasting: expanding-window (main) and 20-year rolling-window (robustness check) out-of-sample forecasting
 Models: historical mean, OLS, OLS-4, Ridge, Elastic Net, Random Forest
